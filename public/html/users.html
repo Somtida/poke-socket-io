@@ -1,0 +1,25 @@
+<h1>Users</h1>
+
+<!-- <pre>{{ users | json }}</pre> -->
+<div class="alert alert-warning"  ng-show='poke'>
+
+  <p>you got <span>{{poke}}</span>  poke</p>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>email</th>
+      <th>option</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in users track by $index">
+      <td>{{user.email}}</td>
+      <td>
+        <button class="btn btn-success" ng-click="sendMessage($index)">Poke</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
